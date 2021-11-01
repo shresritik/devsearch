@@ -92,23 +92,23 @@ WSGI_APPLICATION = 'devsearch.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases\
 
 # setting up postgres database it needs pip install psycopg2
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',#default in postgres
-        'NAME': 'd8c4nnev8eesq0',#adding name of the database
-        'USER':'sybkozfnayiwdo',#default 'postgres' in postgres
-        'PASSWORD':os.getenv('DB_PASSWORD'),
-        'HOST':'ec2-18-210-95-55.compute-1.amazonaws.com',
-        'PORT':'5432'#default 5432 in postgres
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',#default in postgres
+#         'NAME': 'd8c4nnev8eesq0',#adding name of the database
+#         'USER':'sybkozfnayiwdo',#default 'postgres' in postgres
+#         'PASSWORD':os.getenv('DB_PASSWORD'),
+#         'HOST':'ec2-18-210-95-55.compute-1.amazonaws.com',
+#         'PORT':'5432'#default 5432 in postgres
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
